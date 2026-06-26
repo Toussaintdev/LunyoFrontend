@@ -1,8 +1,14 @@
+"use client";
+
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
-import React, { useId } from "react";
+import React, { useId, useState } from "react";
 
 export default function Register() {
+  const username = useState(null);
+  const email = useState(null);
+  const password = useState(null);
+  const password2 = useState(null);
   const idNom = useId();
   const idEmail = useId();
   const idPassword = useId();
@@ -55,7 +61,7 @@ export default function Register() {
           <Input
             type="submit"
             value="S'inscrire"
-            className="w-56 h-10 bg-primary text-primary-foreground"
+            className="w-56 h-10 bg-primary text-primary-foreground font-semibold"
           />
           <div className="space-x-2 text-center">
             <span>Déjà un compte ?</span>
