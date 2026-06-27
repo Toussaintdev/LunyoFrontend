@@ -1,5 +1,6 @@
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import React from "react";
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -21,6 +22,23 @@ export default function page() {
             <li>Discuter en temps réel</li>
             <li>Suivre d'autres utilisateurs</li>
           </ul>
+          <div className="grid grid-cols-3">
+            <div>
+              <Link href="/register">
+                <Button>Inscrivez vous</Button>
+              </Link>
+            </div>
+            <div>
+              <Link href="/login">
+                <Button>Connectez vous</Button>
+              </Link>
+            </div>
+            <div>
+              <Link href="/feed">
+                <Button>Accédez au feed</Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
